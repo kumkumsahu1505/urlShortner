@@ -17,6 +17,11 @@ const urlSchema = new mongoose.Schema({
             }
         ]
     },
+    createdBy :{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 })
 
 const urlModel = mongoose.model('Url',urlSchema)
